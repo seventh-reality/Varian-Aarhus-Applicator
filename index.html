@@ -6,8 +6,10 @@
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
+     <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
   <body>
+    <div id="card">
     <!-- <model-viewer> HTML element -->
     <model-viewer src="Ring Applicator.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.88" shadow-softness="0.88" exposure="1" environment-image="music_hall_01_1k.hdr">
       <div class="progress-bar hide" slot="progress-bar">
@@ -33,6 +35,7 @@
       </span>
    
     </section>
+       </div>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
