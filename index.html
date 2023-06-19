@@ -10,7 +10,6 @@
   </head>
   
   <body>
-    <iframe src="BG.mp3" allow="autoplay" id="audio" hidden ></iframe>
     
     <div id="card">
     <!-- <model-viewer> HTML element -->
@@ -26,7 +25,7 @@
           <img src="ar_hand_prompt.png">
          <source src="BG.mp3" type="audio/mpeg">
       </div>
-      <audio autoplay >
+      <audio  id="audio">
               <source src="BG.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -68,6 +67,11 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+	 window.onload = function(){
+	          console.log("Autoplay Invoked");
+			document.getElementById(“audio”).play();
+	  }
+
 </script>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
