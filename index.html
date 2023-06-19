@@ -25,7 +25,7 @@
           <img src="ar_hand_prompt.png">
          <source src="BG.mp3" type="audio/mpeg">
       </div>
-      <audio  id="audio">
+      <audio id="myaudio">
               <source src="BG.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -67,11 +67,10 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-	 window.onload = function(){
-	          console.log("Autoplay Invoked");
-			document.getElementById("audio").play();
-	  }
-
+  var x = document.getElementById("myaudio"); 
+	(function () {
+	x.play(); 
+	})();
 </script>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
