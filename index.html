@@ -69,9 +69,12 @@
   const analytics = getAnalytics(app);
   var x = document.getElementById("myaudio"); 
 	x.muted= false;
+	setTimeout(function(){
 	(function () {
 	x.play(); 
 	})();
+	},2500);
+	
 </script>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
